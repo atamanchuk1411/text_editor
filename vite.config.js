@@ -37,11 +37,6 @@ export default defineConfig({
   plugins: [
     createStructure(),
     tailwindcss(),
-    viteStaticCopy({
-      targets: [
-        { src: 'assets/images/*', dest: 'assets/images' },
-      ],
-    }),
     pugPlugin({
       buildLocals: {
         siteName: 'site name',
