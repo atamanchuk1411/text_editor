@@ -1,0 +1,31 @@
+doctype html
+html(lang="uk")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.1, maximum-scale=2.0, minimum-scale=1.0")
+        link(rel="stylesheet" href="assets/styles/style.sass")
+        title text editor
+    body 
+        include components/mixins 
+        div.content(contenteditable="true", id="content")
+        .editor
+            button.bold(type="button", id="bold") B
+            button.italic(type="button", id="italic") I
+            input(type="range", id="text", min="10", max="50", value="16")
+            input.color(type="color", id="color", value="#121212")
+            button.left(type="button", id="left")
+                span.small 
+                span.big
+                span.small 
+                span.big
+            button.center(type="button", id="center")
+                span.small 
+                span.big
+                span.small 
+                span.big
+            button.right(type="button", id="right")
+                span.small 
+                span.big
+                span.small 
+                span.big
+        script(type="module" src="/main.js")
